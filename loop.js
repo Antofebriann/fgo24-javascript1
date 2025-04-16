@@ -7,30 +7,47 @@ for (let i = 1; i <= 5; i++ ) {
 }
 
 
-let x = 0
-while(x<5){
-    let y = 0
-    let temp = ""
-    while(y<5-x)
-        temp +=  "* "
-    y++;
+let x = 0;
+while (x < 5) {
+    let y = 0;
+    let temp = "";
+    while (y < 5 - x) {
+        temp += "* ";
+        y++;
+    }
+    console.log(temp);
+    x++;
 }
-console.log("loop"+(x+1))
-x++;
 
-const u = 5
-let i = 0
-while(i < u) {
-    let j = 0
-    let temp = " "
-    while(j < u) {
-        if (i === 0 || i === u - 1 || j == 0 || j === - 1) {
-            temp += " * "
+
+const u = 5;
+let i = 0;
+while (i < u) {
+    let j = 0;
+    let temp = "";
+    while (j < u) {
+        if (i === 0 || i === u - 1 || j === 0 || j === u - 1) {
+            temp += "* ";
         } else {
-            temp += " "
+            temp += "  "; 
         }
         j++;
     }
-    console.log(temp)
+    console.log(temp);
     i++;
-} 
+}
+
+let n = 5; 
+for (let i = 1; i <= n; i++) {
+    let temp = "";
+    
+    for (let j = 1; j <= n - i; j++) {
+        temp += " ";
+    }
+    
+    for (let k = 1; k <= i; k++) {
+        temp += "* ";
+    }
+    
+    console.log(temp);
+}
